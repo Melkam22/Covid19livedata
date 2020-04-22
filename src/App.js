@@ -6,11 +6,18 @@ import styles from './App.module.css';
 import {fetchForCards} from './API';
 
 class App extends Component {
+  state = {
+    data: {}
+  }
+
    
 //fetching the data
 async componentDidMount(){
-  const data = await fetchForCards()
-  console.log(data);
+  const myData = await fetchForCards()
+  this.setState({
+    data: myData
+  })
+  console.log(myData);
 }
 
   render(){
@@ -18,7 +25,7 @@ async componentDidMount(){
   return (
     <div className={styles.container}>
         {/* <h2>App.js</h2> */}
-        <Cards />
+        <Cards data={this.state.data}/>
         <EachCountry />
         <Chart />
     </div>
