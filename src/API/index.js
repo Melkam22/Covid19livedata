@@ -26,7 +26,7 @@ export const fetchForCards = async()=>{
         confirmed: data.confirmed,
         recovered: data.recovered,
         deaths: data.deaths,
-        dailyTimeSeries: data.dailyTimeSeries
+        lastUpdate: data.lastUpdate
     }
             return preciseData
     }
