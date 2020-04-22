@@ -5,13 +5,13 @@ import CountUp from 'react-countup';
 
 /* const Cards = (props) => {
     console.log(props) to fetch data & show it on cards.jsx do the below*/
-    const Cards = ({data: {confirmed, recovered, deaths, lastUpdate} }) => {
+const Cards = ({data: {confirmed, recovered, deaths, lastUpdate} }) => {
         if(!confirmed){
             return 'Searching ...'
         }
-    return(
-        <div className={styles.container/* , styles.card */}>
-        <div className={styles.card}> 
+return(//cards from materializedcss
+        <div className={styles.container}>
+        <div className={cx(styles.card, styles.first)}> 
             <div class="col s12 m6">
             <div class="card blue-grey darken-1">
             <div class="card-content white-text">
@@ -19,7 +19,7 @@ import CountUp from 'react-countup';
             {/* <p>{confirmed.value}</p> just to add countup do the below */}
             <CountUp 
                 start={0}
-                end={confirmed.value}
+                end={confirmed.value}//value is shown on browser inspect
                 duration={15}
                 separator=","
             />
@@ -32,10 +32,10 @@ import CountUp from 'react-countup';
              </div>
              </div>
             </div>
-              </div> 
+        </div> 
 
         {/* Recovered */}
-        <div className={styles.card}> 
+        <div className={cx(styles.card, styles.second)}> 
             <div class="card blue-grey darken-1">
             <div class="card-content white-text">
              <p>Recovered-Patients</p>
@@ -55,7 +55,7 @@ import CountUp from 'react-countup';
              </div>
             </div>
             {/* deaths */}
-            <div className={styles.card}> 
+            <div className={cx(styles.card, styles.third)}> 
             <div class="card blue-grey darken-1">
             <div class="card-content white-text">
              <p>Confirmed-Deaths</p>

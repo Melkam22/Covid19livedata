@@ -20,9 +20,9 @@ async componentDidMount(){
   console.log(myData);
 }
 
-  render(){
+render(){
 
-  return (
+return (
     <div className={styles.container}>
         {/* <h2>App.js</h2> */}
         <Cards data={this.state.data}/>
