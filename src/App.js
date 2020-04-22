@@ -6,7 +6,7 @@ import styles from './App.module.css';
 import {fetchForCards} from './API';
 
 class App extends Component {
-
+   
 //fetching the data
 async componentDidMount(){
   const data = await fetchForCards()
