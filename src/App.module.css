@@ -1,0 +1,10 @@
+ body{
+     background: rgba(123,156,184,.5);
+ }
+
+ /* styling all contents */
+ .container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
