@@ -22,7 +22,7 @@ const showLineChart = (
             labels: Ddata.map(({date})=> date),
             datasets: [
                 { data: Ddata.map(({confirmed})=>confirmed)},
-                {data: Ddata.map(({confirmed})=>confirmed)}
+                {data: Ddata.map(({deaths})=>deaths)}
                     ]
         }}
     /> ) : null
