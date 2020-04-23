@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {showDailyData} from '../../API';
 import {Line, Bar} from 'react-chartjs-2';
+import styles from './Chart.module.css';
 
 const Chart = () =>{
     const [Ddata, setDdata] = useState([]);//same as state={Ddata: []};
@@ -31,7 +32,7 @@ const showLineChart = (
 )
     return(
         //<h1> Chart</h1>
-        <div>
+        <div className={styles.container}>
             {showLineChart}
         </div>
         )
