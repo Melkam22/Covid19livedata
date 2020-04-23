@@ -16,6 +16,7 @@ export const fetchForCards = async()=>{
 } to target the right data do the below*/
 import axios from 'axios';
 
+/* fetchdata for Cards.jsx */
 const url = 'https://covid19.mathdro.id/api';
 
     
@@ -32,5 +33,23 @@ export const fetchForCards = async()=>{
     }
     catch (error){
         console.log(error)
+    }
+}
+
+/* fetchdata for Chart.jsx */
+
+export const showDailyData = async()=>{
+    try{
+        const {data} = await axios.get(`${url}/daily`);
+            const theDailyData = data.map((theData) =>({
+            infected: theData.value,
+            recovered: theData.recovered,
+            deaths: theData.value,
+            date: theData.lastUpdate
+        }))
+        return theDailyData
+    }
+    catch(error){
+        console.log(error);//& export showDailyData to Chart.jsx
     }
 }
