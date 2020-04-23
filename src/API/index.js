@@ -42,9 +42,9 @@ export const showDailyData = async()=>{
     try{
         const {data} = await axios.get(`${url}/daily`);
             const theDailyData = data.map((theData) =>({
-            infected: theData.value,
-            recovered: theData.recovered,
-            deaths: theData.value,
+            infected: theData.confirmed.total,
+            recovered: theData.recovered.total,
+            deaths: theData.deaths.total,
             date: theData.lastUpdate
         }))
         return theDailyData
