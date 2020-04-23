@@ -14,7 +14,7 @@ useEffect (()=>{
 })
 
 return(
-    <h1> Chart</h1>
+    <h2>Chart</h2>
     )
     
 }
