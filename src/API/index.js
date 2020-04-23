@@ -45,9 +45,10 @@ export const showDailyData = async()=>{
             infected: theData.confirmed.total,
             recovered: theData.recovered.total,
             deaths: theData.deaths.total,
-            date: theData.lastUpdate
-        }))
+            date: theData.reportDate
+        })) 
         return theDailyData
+        //console.log(data)
     }
     catch(error){
         console.log(error);//& export showDailyData to Chart.jsx
