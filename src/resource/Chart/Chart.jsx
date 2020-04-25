@@ -15,7 +15,7 @@ useEffect (()=>{
 })
 //display global line-chart below
 const showLineChart = (
-    Ddata[0] ? (
+    /* Ddata[0] */ Ddata.length != "" ? (
     <Line 
         data={{
             //labels: Ddata.map(({date})=> date),
@@ -24,7 +24,7 @@ const showLineChart = (
             datasets: [
                 //{ data: Ddata.map(({confirmed})=>confirmed)}before,
                 //{data: Ddata.map(({deaths})=>deaths)}
-                { data: Ddata.map(({infected})=>infected), label: 'Infected', borderColor:'rgba(255,0,0,1)', fill: true},
+                { data: Ddata.map(({infected})=>infected), label: 'Infected', borderColor:'rgba(255,0,0,1)', backgroundColor:'rgba(255,0,0,.4)', fill: true},
                 {data: Ddata.map(({deaths})=>deaths), label: 'Deaths', borderColor: 'rgba(0,0,255,1)', backgroundColor:'rgba(0,0,255,.4)', fill: true},
                     ],
         }}

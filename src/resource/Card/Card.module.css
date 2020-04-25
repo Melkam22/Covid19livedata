@@ -11,11 +11,11 @@
  }
 
  .first{
-     border-bottom: 12px solid rgba(255,0,0,.5);
+     border-bottom: 40px solid rgba(255,0,0,.5);
  }
  .second{
-    border-bottom: 12px solid rgba(0,255,0, .5);
+    border-bottom: 40px solid rgba(0,255,0, .5);
 }
 .third{
-    border-bottom: 12px solid rgba(0,0,255,.5);
+    border-bottom: 40px solid rgba(0,0,255,.5);
 }
