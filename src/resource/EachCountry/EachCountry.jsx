@@ -13,7 +13,7 @@ useEffect(()=>{
     }
     console.log(eachCountry);
     showCountries();
-}, [setEachCountry]);
+},[setEachCountry]);
 
 return(
     //<h1> EachCountry</h1>instead of it, do the below

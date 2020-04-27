@@ -56,10 +56,21 @@ export const showDailyData = async()=>{
 }
 
 /* fetchdata for EachCountry.jsx */
-export const fetchEachCountry = async()=>{
+/* fetchdata for EachCountry.jsx */
+/* export const fetchEachCountry = async()=>{
     try{
         const response = await axios.get(`${url}/countries`);
         console.log(response);
+    }
+    catch(error){
+        console.log(error);
+    }
+}, it works, once we ve seen list of countries we ll change it to the below */
+
+export const fetchEachCountry = async()=>{
+    try{
+        const {data: {countries}} = await axios.get(`${url}/countries`);
+        return countries.map((chaquePays)=>chaquePays.name);
     }
     catch(error){
         console.log(error);
