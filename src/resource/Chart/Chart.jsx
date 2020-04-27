@@ -15,7 +15,7 @@ useEffect (()=>{
 })
 //display global line-chart below
 const showLineChart = (
-    /* Ddata[0] */ Ddata.length != "" ? (
+    /* Ddata[0] */ Ddata.length !== "" ? (
     <Line 
         data={{
             //labels: Ddata.map(({date})=> date),

@@ -20,9 +20,14 @@ import axios from 'axios';
 const url = 'https://covid19.mathdro.id/api';
 
     
-export const fetchForCards = async()=>{
+export const fetchForCards = async(country)=>{//chaquepays
+    let updatingUrl = url;//this
+    if(country){
+        updatingUrl = `${url}/countries/${country}`//.... are added to populate the cards with eachcountry data
+    }
+     
     try {
-    const {data} = await axios.get(url); //{data} is from the url - inspect given data
+    const {data} = await axios.get(updatingUrl); //{data} is from inspect, to populate the cards with eachcountry data changed to y later 
     const preciseData = {
         confirmed: data.confirmed,
         recovered: data.recovered,
@@ -70,10 +75,11 @@ export const showDailyData = async()=>{
 export const fetchEachCountry = async()=>{
     try{
         const {data: {countries}} = await axios.get(`${url}/countries`);
-        return countries.map((chaquePays)=>chaquePays.name);
+        return countries.map((country)=>country.name);
     }
     catch(error){
-        console.log(error);//then, export it to EachCountry.jsx
+        console.log(error);//then, export it to EachCountry.jsx, finally we ll go to the first apifetch and update it
     }
 }
+ 
  

@@ -4,11 +4,12 @@ import Chart from './resource/Chart/Chart';
 import EachCountry from './resource/EachCountry/EachCountry';
 import styles from './App.module.css';
 import {fetchForCards} from './API';
+//import {fetchEachCountry} from './API';
 
 class App extends Component {
   state = {
     data: {},
-    chaquePays: ""
+    country: ''
   }
 
    
@@ -20,9 +21,10 @@ async componentDidMount(){
   })
   //console.log(myData);
 }
-handleChaquePays = async (chaquePays)=>{
-  console.log(chaquePays);
-  //this.setState({chaquePays: chaquePays});
+handleChaquePays = async (country)=>{
+  const data = await fetchForCards(country);
+  console.log(data);//we see list of countries, then, we ll change the api to get the data for each countries
+   
 }
 
 render(){

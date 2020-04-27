@@ -22,7 +22,7 @@ return(
     <FormControl >
         <NativeSelect defaultValue="" onChange={(e)=>handleChaquePays(e.target.value)}> 
             <option value="global">All Countries</option>
-            {eachCountry.map((chaquePays, a)=><option key={a} value={chaquePays}>{chaquePays}</option>)} 
+            {eachCountry.map((country, a)=><option key={a} value={country}>{country}</option>)} 
         </NativeSelect>
     </FormControl>//go to App.jsx & set a state ...
     )
