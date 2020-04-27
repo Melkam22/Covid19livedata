@@ -11,7 +11,7 @@ useEffect(()=>{
     const showCountries = async ()=>{
         setEachCountry (await fetchEachCountry());
     }
-    console.log(eachCountry);
+    //console.log(eachCountry);we ll delete this when we map the data inside return & pass it inside option 
     showCountries();
 },[setEachCountry]);
 
@@ -20,6 +20,7 @@ return(
     <FormControl>
         <NativeSelect> 
             <option value="global">All Countries</option>
+            {eachCountry.map((chaquePays, a)=><option key={a} value={chaquePays}>{chaquePays}</option>)}
         </NativeSelect>
     </FormControl> 
     )

@@ -73,6 +73,6 @@ export const fetchEachCountry = async()=>{
         return countries.map((chaquePays)=>chaquePays.name);
     }
     catch(error){
-        console.log(error);
+        console.log(error);//then, export it to EachCountry.jsx
     }
 }
