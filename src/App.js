@@ -22,9 +22,11 @@ async componentDidMount(){
   //console.log(myData);
 }
 handleChaquePays = async (country)=>{
-  const data = await fetchForCards(country);
-  console.log(data);//we see list of countries, then, we ll change the api to get the data for each countries
-   
+  const myData = await fetchForCards(country);
+  //console.log(data);//we see list of countries, then, we ll change the api to get the data for each countries
+  this.setState({
+    data: myData, country: country
+  }) 
 }
 
 render(){
