@@ -18,11 +18,11 @@ async componentDidMount(){
   this.setState({
     data: myData
   })
-  console.log(myData);
+  //console.log(myData);
 }
 handleChaquePays = async (chaquePays)=>{
-  //console.log(chaquePays);
-  this.setState({chaquePays: chaquePays});
+  console.log(chaquePays);
+  //this.setState({chaquePays: chaquePays});
 }
 
 render(){

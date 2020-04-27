@@ -10,7 +10,7 @@ useEffect (()=>{
     const displayDailyData = async()=>{
         setDdata(await showDailyData())
     }
-    console.log(Ddata);
+    //console.log(Ddata);
     displayDailyData();
 })
 //display global line-chart below

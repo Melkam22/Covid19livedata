@@ -3,8 +3,8 @@ import {NativeSelect, FormControl} from '@material-ui/core';//input field
 import styles from './Each.module.css';
 import {fetchEachCountry} from '../../API';
 
-const EachCountry = () => {//after handleChaquePays on App.jsx, instead of this the below
-//const EachCountry = ({handleChaquePays}) => {
+//const EachCountry = () => {//after handleChaquePays on App.jsx, instead of this the below
+const EachCountry = ({handleChaquePays}) => {
 const [eachCountry, setEachCountry] = useState([]);
 
 useEffect(()=>{
@@ -14,14 +14,15 @@ useEffect(()=>{
     //console.log(eachCountry);//we ll delete this when we map the data inside return & pass it inside option 
     showCountries();
 },[setEachCountry]);//to avoid infinite loop
-console.log(eachCountry);
+//console.log(eachCountry);//dlt it once eachCountry.map is done for chaquePays
+
 
 return(
     //<h1> EachCountry</h1>instead of it, do the below
     <FormControl >
-        <NativeSelect /* defaultValue="" onChange={(e)=>handleChaquePays(e.target.value)} */> 
+        <NativeSelect defaultValue="" onChange={(e)=>handleChaquePays(e.target.value)}> 
             <option value="global">All Countries</option>
-            {/* {eachCountry.map((chaquePays, a)=><option key={a} value={chaquePays}>{chaquePays}</option>)} */}
+            {eachCountry.map((chaquePays, a)=><option key={a} value={chaquePays}>{chaquePays}</option>)} 
         </NativeSelect>
     </FormControl>//go to App.jsx & set a state ...
     )
