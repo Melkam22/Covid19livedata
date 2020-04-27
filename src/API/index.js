@@ -55,9 +55,9 @@ export const showDailyData = async()=>{
     }
 }
 
+
 /* fetchdata for EachCountry.jsx */
-/* fetchdata for EachCountry.jsx */
-/* export const fetchEachCountry = async()=>{
+ /* export const fetchEachCountry = async()=>{
     try{
         const response = await axios.get(`${url}/countries`);
         console.log(response);
@@ -65,7 +65,7 @@ export const showDailyData = async()=>{
     catch(error){
         console.log(error);
     }
-}, it works, once we ve seen list of countries we ll change it to the below */
+}  it works, once we ve seen list of countries we ll change it to the below*/
 
 export const fetchEachCountry = async()=>{
     try{
@@ -76,3 +76,4 @@ export const fetchEachCountry = async()=>{
         console.log(error);//then, export it to EachCountry.jsx
     }
 }
+ 

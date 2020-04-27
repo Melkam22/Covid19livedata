@@ -7,7 +7,8 @@ import {fetchForCards} from './API';
 
 class App extends Component {
   state = {
-    data: {}
+    data: {},
+    chaquePays: ""
   }
 
    
@@ -19,6 +20,10 @@ async componentDidMount(){
   })
   console.log(myData);
 }
+handleChaquePays = async (chaquePays)=>{
+  //console.log(chaquePays);
+  this.setState({chaquePays: chaquePays});
+}
 
 render(){
 
@@ -26,7 +31,7 @@ return (
     <div className={styles.container}>
         {/* <h2>App.js</h2> */}
         <Cards data={this.state.data}/>
-        <EachCountry />
+        <EachCountry handleChaquePays={this.handleChaquePays}/>{/* call it @ it to EachCountry.ejx */}
         <Chart />
     </div>
   );
