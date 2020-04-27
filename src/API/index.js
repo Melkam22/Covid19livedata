@@ -54,3 +54,14 @@ export const showDailyData = async()=>{
         console.log(error);//& export showDailyData to Chart.jsx
     }
 }
+
+/* fetchdata for EachCountry.jsx */
+export const fetchEachCountry = async()=>{
+    try{
+        const response = await axios.get(`${url}/countries`);
+        console.log(response);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
