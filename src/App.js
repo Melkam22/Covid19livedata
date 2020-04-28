@@ -36,7 +36,7 @@ return (
         {/* <h2>App.js</h2> */}
         <Cards data={this.state.data}/>
         <EachCountry handleChaquePays={this.handleChaquePays}/>{/* call it @ it to EachCountry.ejx */}
-        <Chart />
+        <Chart data={this.state.data} country={this.state.country}/>
     </div>
   );
 }

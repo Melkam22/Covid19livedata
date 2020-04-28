@@ -20,7 +20,7 @@ return(//cards from materializedcss
             <CountUp 
                 start={0}
                 end={confirmed.value}//value is shown on browser inspect
-                duration={15}
+                duration={10}
                 separator=","
             />
             <p>{new Date(lastUpdate).toDateString()}</p>
@@ -42,7 +42,7 @@ return(//cards from materializedcss
              <CountUp 
                 start={0}
                 end={recovered.value}
-                duration={15}
+                duration={10}
                 separator=","
              />
             <p>{new Date(lastUpdate).toDateString()}</p>
@@ -62,7 +62,7 @@ return(//cards from materializedcss
              <CountUp 
                 start={0}
                 end={deaths.value}
-                duration={15}
+                duration={10}
                 separator=","
              />
             <p>{new Date(lastUpdate).toDateString()}</p>
