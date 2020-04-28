@@ -19,7 +19,7 @@ useEffect(()=>{
 
 return(
     //<h1> EachCountry</h1>instead of it, do the below
-    <FormControl >
+    <FormControl className={styles.container}>
         <NativeSelect defaultValue="" onChange={(e)=>handleChaquePays(e.target.value)}> 
             <option value="global">All Countries</option>
             {eachCountry.map((country, a)=><option key={a} value={country}>{country}</option>)} 

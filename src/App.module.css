@@ -9,3 +9,18 @@
      justify-content: center;
      align-items: center;
  }
+
+ .img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      height: 170px;
+      margin-top: 1%;
+ }
+ 
+ @media screen and (max-width: 820px) {
+    .img {
+      width: 98%;
+    }
+  }

@@ -4,6 +4,7 @@ import Chart from './resource/Chart/Chart';
 import EachCountry from './resource/EachCountry/EachCountry';
 import styles from './App.module.css';
 import {fetchForCards} from './API';
+import covidImg from './images/covid19.jpeg';
 //import {fetchEachCountry} from './API';
 
 class App extends Component {
@@ -34,9 +35,10 @@ render(){
 return (
     <div className={styles.container}>
         {/* <h2>App.js</h2> */}
+        <img className={styles.img} src={covidImg}/>
         <Cards data={this.state.data}/>
         <EachCountry handleChaquePays={this.handleChaquePays}/>{/* call it @ it to EachCountry.ejx */}
-        <Chart data={this.state.data} country={this.state.country}/>
+        <Chart />
     </div>
   );
 }
