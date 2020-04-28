@@ -35,7 +35,7 @@ render(){
 return (
     <div className={styles.container}>
         {/* <h2>App.js</h2> */}
-        <img className={styles.img} src={covidImg}/>
+        <img className={styles.img} src={covidImg} alt="covid-19"/>
         <Cards data={this.state.data}/>
         <EachCountry handleChaquePays={this.handleChaquePays}/>{/* call it @ it to EachCountry.ejx */}
         <Chart />
