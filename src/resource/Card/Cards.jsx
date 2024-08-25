@@ -27,7 +27,7 @@ return(//cards from materializedcss
             <p>Covid-19 Pandemic Current Information</p>
                 </div>
             <div class="card-action">
-            <a href="https://www.who.int/" target="_blank">Link to WHO</a>
+            {/* <a href="https://www.who.int/" target="_blank">Link to WHO</a> */}
            
              </div>
              </div>
@@ -49,7 +49,7 @@ return(//cards from materializedcss
             <p>Covid-19 Pandemic Current Information</p>
                 </div>
             <div class="card-action">
-            <a href="https://www.who.int/" target="_blank">Link to WHO</a>
+            {/* <a href="https://www.who.int/" target="_blank">Link to WHO</a> */}
            
              </div>
              </div>
@@ -69,7 +69,7 @@ return(//cards from materializedcss
             <p>Covid-19 Pandemic Current Information</p>
                 </div>
             <div class="card-action">
-            <a href="https://www.who.int/" target="_blank">Link to WHO</a>
+            {/* <a href="https://www.who.int/" target="_blank">Link to WHO</a> */}
            
              </div>
              </div>
